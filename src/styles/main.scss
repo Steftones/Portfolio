@@ -1,0 +1,354 @@
+@import '../../node_modules/bulma/bulma.sass';
+
+html {
+  scroll-behavior: smooth;
+  font-size: 14px;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.parallax-background {
+  background-position: center;
+  background-size: 400px;
+  min-height: 400px;
+  background-attachment: fixed;
+}
+
+.par-1 {
+  background-image: url('../assets/background1.png');
+  background-repeat: repeat;
+}
+
+.par-2 {
+  background-image: url("../assets/background2.png"); 
+  background-repeat: repeat;
+}
+
+.Diagonal {
+  width: 100%;
+  border-bottom: 85px;
+  position: absolute;
+  overflow-x: hidden;
+}
+
+.down-white {
+  border-bottom: 85px solid white;
+  transform: translateY(-50px) translateX(0px) rotate(2deg);
+}
+
+.up-white {
+  border-bottom: 85px solid white;
+  transform: translateY(-50px) translateX(0px) rotate(-2deg);
+}
+
+.down-black {
+  border-bottom: 85px solid rgb(0, 0, 0);
+  transform: translateY(-50px) translateX(0px) rotate(2deg);
+}
+
+.up-black {
+  border-bottom: 85px solid rgb(0, 0, 0);
+  transform: translateY(-50px) translateX(0px) rotate(-2deg);
+}
+
+.Parallax {
+  background: solid black;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+}
+
+.Fixed {
+  position: relative;
+}
+
+.navbarStyle {
+  background-color: #0A0A0A;
+}
+
+.column {
+  margin: 0px;
+}
+
+.heroContainer {
+  padding-bottom: 10%;
+}
+
+.aboutColumn {
+  padding-right: 80px;
+}
+
+.button {
+  margin: 3px;
+}
+
+.navTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionTitle {
+  font-size: 80px;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+  .sectionTitle {
+    font-size: 12vw;
+    padding-bottom: 20px;
+  }
+  .aboutColumn {
+    padding-right: 0px;
+  }
+  .contacts-container {
+    width: 300px;
+    font-size: 11px;
+  }
+  .copyright {
+    margin-top: 20px;
+  }
+  .section {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.whiteText {
+  color: white;
+}
+
+.blackSection {
+  background-color: black;
+}
+
+.devicon-supercollider {
+  background-image: url('../assets/skills/supercollider.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.devicon-unity {
+  background-image: url('../assets/skills/unity.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.skillIcons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.skillIcons {
+  font-size: 50px;
+}
+
+.smallSkillIcons {
+  font-size: 30px;
+}
+
+.skillIcons span {
+  font-size: 13px;
+}
+
+.skillBox {
+  width: 90px;
+  padding: 10px;
+}
+
+.sectionMargin {
+  margin: 0px 10% 0px 10%;
+}
+
+.carouselWhole {
+  width: 30vw;
+  height: 30vw;
+  min-width: '250px';
+  min-height: '250px';
+}
+
+.modalContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.carouselImage {
+  width: 30vw;
+  height: 30vw;
+}
+
+.modalImage {
+  width: 40vw;
+  height: 40vw;
+}
+
+.carouselButton {
+  background-color: rgba(0, 0, 0, 0.671);
+  color: rgb(255, 255, 255);
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .carouselWhole {
+    width: 70vw;
+    height: 70vw;
+    margin-bottom: 30px;
+  }
+  .carouselImage {
+    width: 70vw;
+    height: 70vw;
+  }
+}
+
+.carouselWrapper {
+  margin-right: 300px;
+}
+
+.projectButtons {
+  margin-top: 15px;
+}
+
+.projectDescription {
+  margin: 30px 0px 50px 0px;
+}
+
+.interestContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.interests {
+  width: 250px;
+  height: 250px;
+  font-size: small;
+  padding: 20px;
+  margin: 30px;
+  text-align: wrap;
+  color: rgba(255, 255, 255, 0);
+}
+
+@media (max-width: 510px){
+  .interests {
+    min-width: 210px;
+    min-width: 210px;
+  }
+  .interests5 {
+    min-height: 350px;
+  }
+}
+
+.interests1 {
+  background: url('../assets/super.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}  
+
+.interests2 {
+  background: url('../assets/tonejs.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}  
+
+.interests3 {
+  background: url('../assets/unityLogo.webp');
+  background-size: 100%;
+  background-repeat: no-repeat;
+} 
+
+.interests4 {
+  background: url('../assets/cycling.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.interests5 {
+  width: 500px;
+  height: 250px;
+  background: url('../assets/macImage.webp');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.interests:hover {
+  color: black;
+  border: 20px solid black;
+  background: none;
+  background-size: 100%;
+}
+
+.experience {
+  margin-right: 40px;
+}
+
+.experienceContent {
+  margin-top: 20px;
+}
+
+.experience h2 {
+  font-size: 25px;
+}
+
+.experience h4 {
+  font-size: 20px;
+  min-height: 40px;
+}
+
+@media (max-width: 500px){
+  .experience {
+    margin: 30px 10px 30px 10px;
+  }
+}
+
+.linkedInButton {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0px; 
+  padding-left: 0px;
+}
+
+.circleList {
+  list-style: circle;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.contacts-container i {
+  width: 30px;
+  padding-right: 35px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contactLink {
+  color: black;
+}
+
+.contactLink:hover {
+  color: rgba(0, 0, 0, 0.39);
+}
+
+.hiddenAnchors {
+  visibility: hidden;
+}
+
