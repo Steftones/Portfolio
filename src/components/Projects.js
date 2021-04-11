@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Carousel, Modal } from 'react-bootstrap'
 import TechSkills from './TechSkills'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 
 import cabbage1 from '../assets/cabbage/cabbage1.png'
 import cabbage2 from '../assets/cabbage/cabbage2.png'
@@ -151,18 +151,18 @@ const Projects = () => {
       </Carousel> 
     </div>
     <div className="column whiteText">
-      <h1>{projectItems[index].title}</h1>
+      <h3>{projectItems[index].title}</h3>
 
       <div className="projectButtons">
         <button
-          className="button is-small is-primary is-inverted is-outlined is-rounded"
+          className="button is-primary is-inverted is-outlined is-rounded"
           onClick={() => window.open(projectItems[index].github, '_blank')}>view on github.</button>
         {projectItems[index].live && <>
         <button
-        className="button is-small is-primary is-inverted is-outlined is-rounded"
+        className="button is-primary is-inverted is-outlined is-rounded"
         onClick={() => window.open(projectItems[index].live, '_blank')}>open project.</button>
         </>}
-        <button className="button is-small is-primary is-inverted is-outlined is-rounded" onClick={() => {
+        <button className="button is-primary is-inverted is-outlined is-rounded" onClick={() => {
           setModalProject(projectItems[index].image)
           setModalShow(true)
         }} alt="Live project demo" target="_blank" rel="noreferrer">view pictures.</button>
