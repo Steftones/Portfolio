@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Carousel, Modal } from 'react-bootstrap'
 import TechSkills from './TechSkills'
-// import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import cabbage1 from '../assets/cabbage/cabbage1.png'
 import cabbage2 from '../assets/cabbage/cabbage2.png'
