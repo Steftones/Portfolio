@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Carousel, Modal } from 'react-bootstrap'
+import { Carousel } from 'react-bootstrap'
 import TechSkills from './TechSkills'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import PictureModal from './PictureModal'
 
 import cabbage1 from '../assets/cabbage/cabbage1.png'
 import cabbage2 from '../assets/cabbage/cabbage2.png'
@@ -35,39 +35,6 @@ const Projects = () => {
 
   const [modalShow, setModalShow] = useState(false)
   const [modalProject, setModalProject] = useState(['noImage'])
-
-  const PictureModal = (props) => {
-
-    const extraPictures = modalProject.map((carousel, index) => 
-      <Carousel.Item key={index} interval={120000} >
-        <img className="carouselImage" src={carousel} alt={carousel.title}/>
-      </Carousel.Item>
-    )
-
-    return <>
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-        </Modal.Header>
-
-        <Modal.Body>
-          <div className="modalContainer">
-            <Carousel
-            nextIcon={<div className="carouselButton">&nbsp;&nbsp;<i className="fa fa-chevron-right fa-3x" aria-hidden="true"/></div>}
-            prevIcon={<div className="carouselButton"><i className="fa fa-chevron-left fa-3x" aria-hidden="true"/>&nbsp;&nbsp;</div>}
-            className="carouselWhole" slide={false}>
-              {extraPictures}
-            </Carousel> 
-          </div>
-        </Modal.Body>
-
-      </Modal>
-    </>
-  }
 
   const projectItems = [
     {
@@ -140,7 +107,7 @@ const Projects = () => {
   )
 
   return <>
-    <PictureModal show={modalShow} onHide={() => setModalShow(false)}/>
+    <PictureModal show={modalShow} modalProject={modalProject} onHide={() => setModalShow(false)}/>
 
     <div className="column">
       <Carousel
@@ -151,7 +118,7 @@ const Projects = () => {
       </Carousel> 
     </div>
     <div className="column whiteText">
-      <h3>{projectItems[index].title}</h3>
+      <p class="h1">{projectItems[index].title}</p>
 
       <div className="projectButtons">
         <button
@@ -170,7 +137,7 @@ const Projects = () => {
 
       <p className="projectDescription">{projectItems[index].description}</p>
       
-      <h4>Main tech</h4>
+      <p class="h3">Main tech</p>
       <div>
         <ul>
           <TechSkills skills={projectItems[index].skills} classes="smallSkillIcons"/>
