@@ -23,6 +23,8 @@ import derive5 from '../assets/derive/derive5.png'
 import derive6 from '../assets/derive/derive6.png'
 import derive7 from '../assets/derive/derive7.png'
 import derive8 from '../assets/derive/derive8.png'
+import derive9 from '../assets/derive/derive9.png'
+import derive10 from '../assets/derive/derive10.png'
 
 import synthKitchen1 from '../assets/synthkitchen/synthKitchen1.png'
 import synthKitchen2 from '../assets/synthkitchen/synthKitchen2.png'
@@ -50,8 +52,8 @@ const Projects = () => {
       ]
     },
     {
-      image: [derive1, derive2, derive3, derive4, derive5, derive6, derive7, derive8],
-      title: 'Derive',
+      image: [derive1, derive2, derive3, derive4, derive5, derive6, derive7, derive8, derive9, derive10],
+      title: 'Dérive',
       subtitle: 'A seq and ssdfsdfynth',
       description: 'General Assembly project 3 (group, 7 days) - a MERN stack application built in a group of three. Incorporated wireframing, prototyping and used a Kanban agile methodology. Several aspects were a group effort, but I was responsible for building "profile interaction" both on the front and back end.',
       github: 'https://github.com/Steftones/project-3',
@@ -88,7 +90,6 @@ const Projects = () => {
       live: null,
       skills: [['ruby-plain', 'Ruby'], ['git-plain','Git']]
     },
-
   ]
 
   const [index, setIndex] = useState(0);
@@ -107,7 +108,14 @@ const Projects = () => {
   )
 
   return <>
-    <PictureModal show={modalShow} modalProject={modalProject} onHide={() => setModalShow(false)}/>
+
+    <div className={`modal ${modalShow}`}>
+      <div className="modal-background"></div>
+      <div className="modal-content">
+        <PictureModal modalProject={modalProject}/>
+      </div>
+      <button className="modal-close is-large" aria-label="close" onClick={() => setModalShow('')}></button>
+    </div>
 
     <div className="column">
       <Carousel
@@ -117,9 +125,8 @@ const Projects = () => {
         {carousels}
       </Carousel> 
     </div>
-    <div className="column whiteText">
-      <p class="h1">{projectItems[index].title}</p>
-
+    <div className="column whiteText projectColumn">
+      <h1 className="subtitle is-1 whiteText">{projectItems[index].title}</h1>
       <div className="projectButtons">
         <button
           className="button is-primary is-inverted is-outlined is-rounded"
@@ -131,16 +138,16 @@ const Projects = () => {
         </>}
         <button className="button is-primary is-inverted is-outlined is-rounded" onClick={() => {
           setModalProject(projectItems[index].image)
-          setModalShow(true)
+          setModalShow('is-active')
         }} alt="Live project demo" target="_blank" rel="noreferrer">view pictures.</button>
       </div>
 
       <p className="projectDescription">{projectItems[index].description}</p>
       
-      <p class="h3">Main tech</p>
+      <h3 className="subtitle is-3 whiteText">Main tech</h3>
       <div>
         <ul>
-          <TechSkills skills={projectItems[index].skills} classes="smallSkillIcons"/>
+          <TechSkills skills={projectItems[index].skills} />
         </ul>
       </div>
     </div>

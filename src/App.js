@@ -61,22 +61,16 @@ const App = () => {
         <h1 className="title sectionTitle">
           about.
         </h1>
-        <h2 className="subtitle">
+        <h5 className="subtitle is-5">
           web developer | London
-        </h2>
+        </h5>
         <p>
           I'm a recent graduate Software Engineer with experience in full-stack technologies and web development. As a creative individual, I became interested in coding as a new way to explore my interests by building digital instruments, games, and other tools. My drive to learn is what pushes me forward, and my eye for good design inspires me to refine and polish. I continue to learn about full-stack development and am always challenging myself by making new projects. I'm keen to build upon my interests, experiences and knowledge in a professional environment, working diligently as part of a collaborative team.
         </p>
       </div>
       <div className="column">
-        <h2 className="subtitle">
-          Technical skills
-        </h2>
-        <div>
-          <ul>
-            <TechSkills skills={homepageSkills}/>
-          </ul>
-        </div>
+        <h3 className="subtitle is-4">Technical skills</h3>
+        <TechSkills skills={homepageSkills}/>
       </div>
     </div>
   </section>
@@ -111,7 +105,7 @@ const App = () => {
 
           <div className="interestContainer">
             <div className="interests interests1">
-              Learning Supercollider, a programming language for real-time audio synthesis. I am making virtual instruments to control with external hardware.
+              Learning Supercollider to make virtual instruments which can be controlled with external hardware.
             </div>
             <div className="interests interests2">
               Making a music app in JavaScript with Tone JS. The app will create live music based on API data.
@@ -149,7 +143,7 @@ const App = () => {
       date: 'Dec 2020 – Mar 2021',
       content: [
         'An immersive programming course. Various technologies were introduced by instructors, with a mix of traditional classes, collaborative group projects and workshops. The course was solidified with four major projects, daily and weekend homework assignments.',
-        'Technologies covered included: JavaScript, React, Node.js, Git, Express, MongoDB, Python, Flask, PostgreSQL and CSS/Sass'
+        'Technologies covered included: JavaScript, React, Node.js, Git, Express, MongoDB, Python, Flask, PostgreSQL and CSS/Sass.'
       ]
     },
     {
@@ -185,8 +179,8 @@ const App = () => {
         </h1>
         <div className="columns whiteText">
           {experienceData.map((data, index) => <div className="column experience" key={index}>
-              <h2>{data.name}</h2>
-              <h4>{data.role}</h4>
+              <h3 className="title is-3 whiteText">{data.name}</h3>
+              <h4 className="subtitle is-4 whiteText">{data.role}</h4>
               <i>{data.date}</i>
               <ul className="experienceContent circleList">
                 {data.content.map((element, index) => <li key={index}>{element}</li>)}
@@ -243,7 +237,7 @@ const App = () => {
             href="https://www.linkedin.com/in/stefansokolowski/"
             alt="Stefan Sokolowski Linkedin"
             target="_blank"
-            rel="noreferrer">www.linkedin.com/in/stefansokolowski</a>
+            rel="noreferrer">linkedin.com/in/stefansokolowski</a>
           </p>
         </div>
         <a className="hiddenAnchors" name="contact"></a>

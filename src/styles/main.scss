@@ -1,12 +1,22 @@
 @import '../../node_modules/bulma/bulma.sass';
 
+
 html {
   scroll-behavior: smooth;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 html, body {
   overflow-x: hidden;
+}
+
+li {
+  padding-bottom: 5px;
+}
+
+.navbarStyle {
+  background-color: #0A0A0A;
+  position: fixed;
 }
 
 .parallax-background {
@@ -60,14 +70,6 @@ html, body {
   height: 500px;
 }
 
-.Fixed {
-  position: relative;
-}
-
-.navbarStyle {
-  background-color: #0A0A0A;
-}
-
 .column {
   margin: 0px;
 }
@@ -106,7 +108,6 @@ html, body {
   }
   .contacts-container {
     width: 300px;
-    font-size: 11px;
   }
   .copyright {
     margin-top: 20px;
@@ -145,34 +146,44 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-}
-
-.skillIcons {
   font-size: 50px;
 }
 
-.smallSkillIcons {
-  font-size: 30px;
+.iconContainer {
+  width: 80px;
+  text-align: center;
+  margin: 8px;
 }
 
-.skillIcons span {
-  font-size: 13px;
-}
-
-.skillBox {
-  width: 90px;
-  padding: 10px;
+.iconLogo {
+  font-size: 50px;
+  display: block;
+  margin: auto;
 }
 
 .sectionMargin {
-  margin: 0px 10% 0px 10%;
+  margin: 0px 8% 0px 8%;
+}
+
+.modalCarouselImage {
+  width: '80%';
+  height: '80%';
+  display: 'block';
+  margin-left: 'auto';
+  margin-right: 'auto';
+  width: '100%'
 }
 
 .carouselWhole {
-  width: 30vw;
-  height: 30vw;
+  width: 35vw;
+  height: 35vw;
   min-width: '250px';
   min-height: '250px';
+}
+
+.carouselImage {
+  width: 35vw;
+  height: 35vw;
 }
 
 .modalContainer {
@@ -180,15 +191,10 @@ html, body {
   justify-content: center;
 }
 
-.carouselImage {
-  width: 30vw;
-  height: 30vw;
-}
-
-.modalImage {
-  width: 40vw;
-  height: 40vw;
-}
+// .modalImage {
+//   width: 40vw;
+//   height: 40vw;
+// }
 
 .carouselButton {
   background-color: rgba(0, 0, 0, 0.671);
@@ -201,29 +207,38 @@ html, body {
   justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .carouselWhole {
-    width: 70vw;
-    height: 70vw;
-    margin-bottom: 30px;
-  }
-  .carouselImage {
-    width: 70vw;
-    height: 70vw;
-  }
-}
-
 .carouselWrapper {
   margin-right: 300px;
+}
+
+.projectColumn {
+  padding-right: 0px;
+  padding-left: 90px;
 }
 
 .projectButtons {
   margin-top: 15px;
 }
 
+@media (max-width: 768px) {
+  .carouselWhole {
+    width: 70vw;
+    height: 70vw;
+    margin: 0px 0px 30px 0px;
+  }
+  .carouselImage {
+    width: 70vw;
+    height: 70vw;
+  }
+  .projectColumn {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
 .button {
-  font-size: '15px';
-  padding: '15px';
+  font-size: 15px;
+  padding: 15px;
 }
 
 .projectDescription {
@@ -240,8 +255,8 @@ html, body {
 .interests {
   width: 250px;
   height: 250px;
-  font-size: small;
-  padding: 20px;
+  font-size: 16px;
+  padding: 18px;
   margin: 30px;
   text-align: wrap;
   color: rgba(255, 255, 255, 0);
@@ -250,10 +265,9 @@ html, body {
 @media (max-width: 510px){
   .interests {
     min-width: 210px;
-    min-width: 210px;
   }
   .interests5 {
-    min-height: 350px;
+    min-height: 400px;
   }
 }
 
@@ -287,6 +301,14 @@ html, body {
   background: url('../assets/macImage.webp');
   background-size: 100%;
   background-repeat: no-repeat;
+  h3 {
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  ul {
+    padding-left: 10px;
+  }
 }
 
 .interests:hover {
@@ -297,15 +319,11 @@ html, body {
 }
 
 .experience {
-  margin-right: 40px;
+  margin-right: 30px;
 }
 
 .experienceContent {
   margin-top: 20px;
-}
-
-.experience h2 {
-  font-size: 25px;
 }
 
 .experience h4 {
@@ -333,6 +351,10 @@ ul {
   list-style: circle;
   margin-left: 0px;
   padding-left: 0px;
+}
+
+.contact-p {
+  margin-bottom: 15px;
 }
 
 .contacts-container i {
